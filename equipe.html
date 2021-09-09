@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>bitflip - Games & Apps</title>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.animate-colors-min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.submenubut').hover(function(){
+		$('.submenu').stop(true,true).fadeIn('fast');
+	}, function(){
+		$('.submenu').stop(true,true).fadeOut('fast');
+	});
+	
+	/** SETA **/
+	var quantos = $('.menuport li').length;
+	var minAltura = 57*quantos;
+	$('.desc').css('min-height',minAltura);
+	
+	$('.menuport li a').not('.menuport li:first-child a').animate({'opacity':'.3'});
+	$('.menuport li a').click(function(event){
+		event.preventDefault();
+		$('.menuport li a').not(this).animate({'opacity':'.3'});
+		var indexSeta = $('.menuport li a').index(this);
+		$('.desc li').not('.desc li:eq('+(indexSeta)+')').css('display','none');
+		$('.desc li:eq('+(indexSeta)+')').fadeIn(1200);
+		var posTop = ($('.menuport li').height()*indexSeta)+10;
+		$('.seta2').animate({'marginTop':posTop});
+		$(this).animate({'opacity':'1'});
+	});
+	
+	/** MENU PORTFOLIO **/
+	/*$(document).scroll(function(){
+		var scrolled = $(window).scrollTop();
+		$('.menuport').stop(true,true).animate({'marginTop':scrolled},800);
+		$('.seta2').stop(true,true).animate({'marginTop':scrolled+10},800);
+		//console.log(scrolled);
+	});*/
+});
+</script>
+</head>
+
+<body style="background-color:#eee;">
+<div class="envolto">
+	<div class="topo">
+    	<div class="conteudo">
+        	<a class="logo" href="index.html"></a>
+            <ul class="menu"> 	
+                <li class="submenubut">
+                	<a href="portfolio.html">Portfólio</a>
+                    <!--
+                    <ul class="submenu">
+                        <li><a href="">Apps</a></li>
+                        <li><a href="">Games</a></li>
+                    </ul>
+                    -->
+                </li>  
+                <li><a href="sobre.html" class="selected">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="miolo" style="padding-top:30px; padding-bottom:70px;">
+        <div class="conteudo">
+            <ul class="menuport">
+				<li><a href="equipe.html"><img style="float:left; margin-right:10px; border:none;" src="images/equipe.png" /><h4 style="margin-top:8px;">Equipe</h4><div class="clear"></div></a></li>
+                <li><a href="sobre.html"><img style="float:left; margin-right:10px; border:none;" src="images/empresa.png" /><h4 style="margin-top:8px;">Bitflip</h4><div class="clear"></div></a></li>
+                <div class="clear"></div>
+            </ul>
+            <div class="seta2"></div>
+            <ul class="desc">
+                <li style="display:block;">
+                    <h1>A Equipe</h1>
+                    </br>
+                    <b>Cássio Scofield</b></br>
+                    Formado em engenharia de computação pela Universidade de São Paulo, é engenheiro de software e desenvolvedor com experiência em sistemas web e mobile responsável pelo desenvolvimento para a plataforma Android
+                    </br>
+                    </br>            
+                    <b>David Fugimoto</b></br>
+                    Designer formado na Universidade do Estado da Bahia, é responsável pela criação da identidade visual, controle de qualidade e usabilidade das soluções
+                    </br>
+                    </br>      
+                    <b>Mateus Kamoei</b></br>
+                    Engenheiro de computação pela Universidade de São Paulo, realiza o desenvolvimento especializado na plataforma iOS com experiência também no desenvolvimento web utilizando Java e MySQL
+                    </br>
+                    </br>      
+                    <b>Mike Chiang</b></br>
+                    Profissional multiuso, formado em engenharia naval na Universidade de São Paulo, tem experiência em marketing digital e também desenvolve para a plataforma iOS
+                    </br>
+                    </br>
+                    </br>  
+                    <b>Oportunidades</b>
+                    </br>
+                    Não há oportunidades de emprego ou estágio no momento
+                </li>
+				<li>
+                    <h1>A Empresa</h1>
+                    </br>
+                    A BitFlip surgiu da oportunidade vista por seus colaboradores no crescente mercado de aplicações mobile. Seu foco está inicialmente no mercado de aplicativos mobile, jogos e aplicações web focadas no público jovem, procurando sempre ter novas idéias de produtos especialmente voltados à lazer, cultura e entretenimento.
+                    </br>
+                    </br>
+                    <b>Soluções</b>
+                    </br>
+                    Nossos desenvolvedores e designers trabalham de modo criativo e inovador com intúito de criar soluções simples para o dia-a-dia, estudando o mercado tentamos enchergar e até prever a necessidades de nossos clientes. Para tanto, não somente tentamos aplicar as melhores práticas de engenheria de software e arquitetura, mas também as melhores práticas em design de interfaces de modo a criar não apenas um software confiável e robusto, mas também bonitos e faceis de se usar, pois sabemos que isto também é um requisito de nossos clientes.
+					</br>
+                    </br>
+					<b>Aplicativos mobile</b>
+					</br>
+					Atualmente estamos desenvolvendo aplicativos para os crescentes mercados de smartfones e tablets, focando inicialmente nas duas plataformas que estão fazendo mais sucesso o Android da Google e o iOS da Apple.
+					</br>
+                    </br>
+                    <b>Web</b>
+               		</br>
+	A empresa também possui experiência em desenvolvimento de soluções web sempre avaliando as melhores tecnologias compatíveis para cada tipo de aplicação. Dentre as tecnologias com as quais trabalhamos podemos citar como as mais utilizadas Java, PHP, Javascript e MySQL.
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="rodape">
+    	<div class="conteudo">
+        	<span class="copyright">
+            © 2012 <b>bitflip</b> - Todos os direitos reservados.
+            </span>
+            <span class="midias">
+            apps@bitflip.com.br
+            </span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

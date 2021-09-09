@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>bitflip - Games & Apps</title>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.animate-colors-min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript">
+
+function onLoadFunction() {
+var indexSeta = 0;
+
+		
+		$('.desc li').not('.desc li:eq('+(indexSeta)+')').css('display','none');
+/* 		$('.desc li:eq('+(indexSeta)+')').fadeIn(1200);
+		var posTop = ($('.menuport li').height()*indexSeta)+10;
+		$('.seta2').animate({'marginTop':posTop});
+		$(this).animate({'opacity':'1'});*/
+}
+
+
+$(document).ready(function(){
+	$('.submenubut').hover(function(){
+		$('.submenu').stop(true,true).fadeIn('fast');
+	}, function(){
+		$('.submenu').stop(true,true).fadeOut('fast');
+	});
+	
+	/** SETA **/
+	var quantos = $('.menuport li').length;
+	var minAltura = 57*quantos;
+	$('.desc').css('min-height',minAltura);
+	
+	$('.menuport li a').not('.menuport li:first-child a').animate({'opacity':'.3'});
+	$('.menuport li a').click(function(event){
+		event.preventDefault();
+		$('.menuport li a').not(this).animate({'opacity':'.3'});
+		var indexSeta = $('.menuport li a').index(this);
+		$('.desc li').not('.desc li:eq('+(indexSeta)+')').css('display','none');
+		$('.desc li:eq('+(indexSeta)+')').fadeIn(1200);
+		var posTop = ($('.menuport li').height()*indexSeta)+10;
+		$('.seta2').animate({'marginTop':posTop});
+		$(this).animate({'opacity':'1'});
+	});
+	
+	/** MENU PORTFOLIO **/
+	/*$(document).scroll(function(){
+		var scrolled = $(window).scrollTop();
+		$('.menuport').stop(true,true).animate({'marginTop':scrolled},800);
+		$('.seta2').stop(true,true).animate({'marginTop':scrolled+10},800);
+		//console.log(scrolled);
+	});*/
+});
+</script>
+</head>
+
+<body style="background-color:#eee;" onLoad="onLoadFunction()">
+
+<div class="envolto">
+	<div class="topo">
+    	<div class="conteudo">
+        	<a class="logo" href="index.html"></a>
+            <ul class="menu">    	
+                <li class="submenubut">
+                	<a href="portfolio.html" class="selected">Portfólio</a>
+                    <!--
+                    <ul class="submenu">
+                        <li><a href="">Apps</a></li>
+                        <li><a href="">Games</a></li>
+                    </ul>
+                    -->
+                </li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="miolo" style="padding-top:30px; padding-bottom:70px;">
+        <div class="conteudo">
+            <ul class="menuport">
+<li><a href=""><img style="float:left; margin-right:10px; border:none;" src="images/smartfila/icon_36.png" /><h4 style="margin-top:8px;">SmartFila</h4><div class="clear"></div></a></li>
+                <li><a href=""><img style="float:left; margin-right:10px; border:none;" src="images/myparty/icon_36.png" /><h4 style="margin-top:8px;">My Party</h4><div class="clear"></div></a></li>
+		<li><a href=""><img style="float:left; margin-right:10px; border:none;" src="images/meuchurrasfree/icon_36.png" /><h4 style="margin-top:8px;">Meu Churras</h4><div class="clear"></div></a></li>
+                <div class="clear"></div>
+            </ul>
+            <div class="seta2"></div>
+            <ul class="desc">
+<li style="display:block;">
+                     <div class="appstats">
+                     	<img width="148px" src="images/smartfila/icon_512.png" border="0" />
+                        <a style="background:url('images/androidbutton.png') no-repeat top left transparent; display:block; width:148px; height:40px; overflow:hidden; margin:10px 0;" href="https://play.google.com/store/apps/details?id=br.com.smartfila.smartphone" target="_blank"></a>
+
+<a style="background:url('images/iphonebutton.png') no-repeat top left transparent; display:block; width:148px; height:51px; overflow:hidden; margin:10px 0;" href="https://itunes.apple.com/br/app/smartfila/id655738260" target="_blank"></a>
+                        
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="pt">Tweetar</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/pages/SmartFila/304431509684454&amp;send=false&amp;layout=button_count&amp;width=148&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=197066307032859"
+        scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:148px; height:21px; margin:10px 0;" allowTransparency="true"></iframe>
+                        
+                        <!-- Coloque esta tag onde você deseja que o botão +1 seja renderizado -->
+                        <g:plusone size="medium"></g:plusone>
+                        
+                        <!-- Coloque esta chamada de renderização conforme necessário -->
+                        <script type="text/javascript">
+                          window.___gcfg = {lang: 'pt-BR'};
+                        
+                          (function() {
+                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                            po.src = 'https://apis.google.com/js/plusone.js';
+                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                          })();
+                        </script>                       
+                     </div>
+                     <div class="appdesc">
+                     	<h1 style="margin-bottom:10px;">SmartFila</h1>
+                        <br />
+                     	<p>SmartFila é o jeito mais inteligente de entrar na fila.
+Você chega ao restaurante, diz o tamanho da sua mesa, seu nome e telefone para a hostess, que os insere no sistema. A partir daí, você está livre para fazer o que quiser.
+Você pode então acompanhar seu lugar na fila em tempo real via aplicativo.
+Quando sua mesa estiver pronta ou quase pronta, a hostess lhe envia um SMS avisando que sua vez está chegando.</p><br /><br />
+			<div style="text-align:center">
+<hr/>
+<br/>
+<h3>iOS</h3>
+<br/>
+                    <img width="32%" src="images/smartfila/ios_1.jpg" border="0" />
+                    <img width="32%" src="images/smartfila/ios_2.jpg" border="0" />
+                    <img width="32%" src="images/smartfila/ios_3.jpg" border="0" />
+<br/>
+<br/>
+<hr/>
+<br/>
+<h3>Android</h3>
+<br/>
+                    <img width="32%" src="images/smartfila/android_1.png" border="0" />
+                    <img width="32%" src="images/smartfila/android_2.png" border="0" />
+                    <img width="32%" src="images/smartfila/android_3.png" border="0" />
+<br/>
+
+<br/>
+                </li> 
+                 <li style="display:block;">
+                     <div class="appstats">
+                     	<img width="148px" src="images/myparty/icon_512.png" border="0" />
+                        <a style="background:url('images/androidbutton.png') no-repeat top left transparent; display:block; width:148px; height:40px; overflow:hidden; margin:10px 0;" href="https://market.android.com/details?id=br.com.bitflip.myparty" target="_blank"></a>
+                        
+<a style="background:url('images/iphonebutton.png') no-repeat top left transparent; display:block; width:148px; height:51px; overflow:hidden; margin:10px 0;" href="https://itunes.apple.com/br/app/my-party-free/id611914437" target="_blank"></a>
+
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="pt">Tweetar</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<iframe src="https://www.facebook.com/plugins/like.php?href=www.facebook.com/pages/My-Party/113093235513306&amp;send=false&amp;layout=button_count&amp;width=148&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=197066307032859"
+        scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:148px; height:21px; margin:10px 0;" allowTransparency="true"></iframe>
+                        
+                        <!-- Coloque esta tag onde você deseja que o botão +1 seja renderizado -->
+                        <g:plusone size="medium"></g:plusone>
+                        
+                        <!-- Coloque esta chamada de renderização conforme necessário -->
+                        <script type="text/javascript">
+                          window.___gcfg = {lang: 'pt-BR'};
+                        
+                          (function() {
+                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                            po.src = 'https://apis.google.com/js/plusone.js';
+                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                          })();
+                        </script>                       
+                     </div>
+                     <div class="appdesc">
+                     	<h1 style="margin-bottom:10px;">My Party</h1>
+                        <br />
+                     	<p>My party is a Versatile party planner, helpful when organizing small and medium parties. Contains shopping list, todo list, quantities calculation depending on number of guests, email functionality and much more.</p><br /><br />
+			<div style="text-align:center">
+<hr/>
+<br/>
+<h3>Android</h3>
+<br/>
+                    <img width="32%" src="images/myparty/guests.png" border="0" />
+                    <img width="32%" src="images/myparty/items.png" border="0" />
+                    <img width="32%" src="images/myparty/shopping_list.png" border="0" />
+<br/>
+
+<br/>
+                </li> 
+                 <li style="display:block;">
+                     <div class="appstats">
+                     	<img width="148px" src="images/meuchurrasfree/icon_512.png" border="0" />
+                        <a style="background:url('images/androidbutton.png') no-repeat top left transparent; display:block; width:148px; height:40px; overflow:hidden; margin:10px 0;" href="https://market.android.com/details?id=bits8.meuChurrasPro" target="_blank"></a>
+                        <a style="background:url('images/iphonebutton.png') no-repeat top left transparent; display:block; width:148px; height:51px; overflow:hidden; margin:10px 0;" href="http://itunes.apple.com/br/app/meuchurras/id517442820" target="_blank"></a>
+
+<a style="background:url('images/browserbutton.png') no-repeat top left transparent; display:block; width:148px; height:45px; overflow:hidden; margin:10px 0;" href="http://www.bitflip.com.br/meuchurras/" target="_blank"></a>
+                        
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="pt">Tweetar</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+                        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FMeu-Churras%2F258521560887740&amp;send=false&amp;layout=button_count&amp;width=148&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=197066307032859" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:148px; height:21px; margin:10px 0;" allowTransparency="true"></iframe>
+                        
+                        <!-- Coloque esta tag onde você deseja que o botão +1 seja renderizado -->
+                        <g:plusone size="medium"></g:plusone>
+                        
+                        <!-- Coloque esta chamada de renderização conforme necessário -->
+                        <script type="text/javascript">
+                          window.___gcfg = {lang: 'pt-BR'};
+                        
+                          (function() {
+                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                            po.src = 'https://apis.google.com/js/plusone.js';
+                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                          })();
+                        </script>                       
+                     </div>
+                     <div class="appdesc">
+                     	<h1 style="margin-bottom:10px;">Meu Churras</h1>
+                        <br />
+                     	<p>O Meu Churras é o aplicativo que te ajuda a organizar seus churrascos, indicando o que comprar, quantidades e fazendo estimativas de custos.</p><br />
+<p>Com ele você sabe exatamente quanto comprar de carne, bebidas, carvão, etc, mesmo que você nunca tenha planejado um churrasco antes, evitando assim que seu churrasco acabe no meio por falta de cerveja ou sua geladeira fique cheia no dia seguinte porque você comprou demais. O Meu Churras também faz estimativas de custos totais e por convidado para você não estourar seu orçamento.</p><br /><br />
+			<div style="text-align:center">
+<hr/>
+<br/>
+<h3>Android</h3>
+<br/>
+                    <img width="32%" src="images/meuchurrasfree/convidados.png" border="0" />
+                    <img width="32%" src="images/meuchurrasfree/bebidas.png" border="0" />
+                    <img width="32%" src="images/meuchurrasfree/lista.png" border="0" />
+	<br/><br/>
+<hr/>
+<br/>
+<h3>Iphone</h3>
+<br/>
+       <img width="32%" src="images/meuchurrasfree/convidados_iphone.png" border="0" />
+                    <img width="32%" src="images/meuchurrasfree/bebidas_iphone.png" border="0" />
+                    <img width="32%" src="images/meuchurrasfree/lista_iphone.png" border="0" />
+<br/>
+<br/>
+<hr/>
+<br/>
+<h3>Pesquisa de Opinião</h3>
+<br/>
+</div>
+<p style="text-algin:justify">
+A sua opinião é muito importante para a BitFlip, por isso disponibilizamos um simples questionário para você avaliar o Meu Churras, queremos saber o que está faltando para que possamos aperfeiçoá-lo para melhor atendê-lo.
+
+<a href="https://docs.google.com/spreadsheet/viewform?formkey=dHVvNlU1TVNMVHRfemZBRndTbmJnVlE6MQ#gid=0">Clique aquí</a> para responder ao questionário.
+
+Agradecemos a sua colaboração e faremos nosso melhor para deixa o Meu Churras ainda mais útil para você usuário!
+</p>
+					</div>
+                    <div class="clear"></div>
+                </li>           
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="rodape">
+    	<div class="conteudo">
+        	<span class="copyright">
+            © 2012 <b>bitflip</b> - Todos os direitos reservados.
+            </span>
+            <span class="midias">
+            apps@bitflip.com.br
+            </span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

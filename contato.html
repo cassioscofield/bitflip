@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>bitflip - Games & Apps</title>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.animate-colors-min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.submenubut').hover(function(){
+		$('.submenu').stop(true,true).fadeIn('fast');
+	}, function(){
+		$('.submenu').stop(true,true).fadeOut('fast');
+	});
+	
+	/** SETA **/
+	var quantos = $('.menuport li').length;
+	var minAltura = 57*quantos;
+	$('.desc').css('min-height',minAltura);
+	
+	/*$('.menuport li a').not('.menuport li:first-child a').animate({'opacity':'.3'});
+	$('.menuport li a').click(function(event){
+		event.preventDefault();
+		$('.menuport li a').not(this).animate({'opacity':'.3'});
+		var indexSeta = $('.menuport li a').index(this);
+		$('.desc li').not('.desc li:eq('+(indexSeta)+')').css('display','none');
+		$('.desc li:eq('+(indexSeta)+')').fadeIn(1200);
+		var posTop = ($('.menuport li').height()*indexSeta)+10;
+		$('.seta2').animate({'marginTop':posTop});
+		$(this).animate({'opacity':'1'});
+	});*/
+	
+	/** MENU PORTFOLIO **/
+	/*$(document).scroll(function(){
+		var scrolled = $(window).scrollTop();
+		$('.menuport').stop(true,true).animate({'marginTop':scrolled},800);
+		$('.seta2').stop(true,true).animate({'marginTop':scrolled+10},800);
+		//console.log(scrolled);
+	});*/
+});
+</script>
+</head>
+
+<body style="background-color:#eee;">
+<div class="envolto">
+	<div class="topo">
+    	<div class="conteudo">
+        	<a class="logo" href="index.html"></a>
+            <ul class="menu">              
+                <li class="submenubut">
+                	<a href="portfolio.html">Portfólio</a>
+                    <!--
+                    <ul class="submenu">
+                        <li><a href="">Apps</a></li>
+                        <li><a href="">Games</a></li>
+                    </ul>
+                    -->
+                </li>      
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html" class="selected">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="miolo" style="padding-top:30px; padding-bottom:70px;">
+        <div class="conteudo">
+            <ul class="menuport">
+                <li><a href="#"><img style="float:left; margin-right:10px; border:none;" src="images/email.png" /><h4 style="margin-top:8px;">apps@biflip.com.br</h4><div class="clear"></div></a></li>
+                <li><a href="http://www.twitter.com/bitflip_apps" target="_blank"><img style="float:left; margin-right:10px; border:none;" src="images/twitter.png" /><h4 style="margin-top:8px;">@bitflip_apps</h4><div class="clear"></div></a></li>
+                <li><a href="http://www.facebook.com/pages/BitFlip/293347227398821" target="_blank"><img style="float:left; margin-right:10px; border:none;" src="images/facebook.png" /><h4 style="margin-top:8px;">bitflip profile</h4><div class="clear"></div></a></li>
+                <li><a href="http://www.youtube.com/user/BitFlipApps" target="_blank"><img style="float:left; margin-right:10px; border:none;" src="images/youtube.png" /><h4 style="margin-top:8px;">bitflip channel</h4><div class="clear"></div></a></li>
+                <div class="clear"></div>
+            </ul>
+            <div class="seta2"></div>
+            <ul class="desc">
+                <li style="display:block;">
+					
+					<form id="contactForm" class="jotform-form" action="http://submit.jotformz.com/submit/50656447819668/" method="post" name="form_50656447819668" id="50656447819668" accept-charset="utf-8">
+							
+							<h3>Deixe seu email e entraremos em contato</h3>
+							
+							<input type="hidden" name="formID" value="50656447819668" />
+							<br/>
+							<br/>
+							
+							<div class="form-group">
+								<label for="contactEmail">Email  <span class="asterisk">*</span></label><br/>
+								<input type="email" value="" name="q16_email" class="form-control required email" id="contactEmail" required style="width:200px;">
+							</div>
+							
+							<br/>
+							
+							<div class="form-group">
+								<label for="contactName">Nome  <span class="asterisk">*</span></label><br/>
+								<input type="text" value="" name="q15_name[first]" class="form-control required" id="contactName" required style="width:200px;">
+							</div>
+							
+							<br/>
+							
+							<div class="form-group">
+								<label for="contactDescription">Mensagem </label><br/>
+								<textarea name="q17_description" class="form-control" id="contactDescription" style="width:200px;height:100px">
+								</textarea>
+							</div>
+							
+							<br/>
+							
+							<div class="indicates-required"><span class="asterisk">*</span>campo requerido</div>
+	
+							<br/>
+							<br/>
+							
+							<input type="submit" value="enviar" style="width:80px">
+				
+							<br/>
+							
+					</form>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="rodape">
+    	<div class="conteudo">
+        	<span class="copyright">
+            © 2012 <b>bitflip</b> - Todos os direitos reservados.
+            </span>
+            <span class="midias">
+            apps@bitflip.com.br
+            </span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
